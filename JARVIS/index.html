@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S. HUD System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="hud-frame">
+        <!-- TEPADAGI KINEMATOGRAFIK PANEL -->
+        <header class="top-bar">
+            <div class="brand">STARK INDUSTRIES // MARK-85</div>
+            <div class="system-time" id="clock">00:00:00</div>
+            <div id="status-tag" class="sys-status">ONLINE</div>
+        </header>
+
+        <!-- ASOSIY ISH MAYDONI -->
+        <main class="main-interface">
+            <!-- CHAP PANEL: RADAR VA HUD STATS -->
+            <aside class="side-panel left-panel">
+                <div class="hud-box">
+                    <span class="box-title">SYSTEM DIAGNOSTICS</span>
+                    <div class="stat-line"><span>CPU:</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 24%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-line"><span>RAM:</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 48%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-line"><span>NETWORK:</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="radar-box">
+                    <div class="radar-sweep"></div>
+                </div>
+            </aside>
+
+            <!-- MARKAZ: YADRO VA KAMERA -->
+            <section class="core-section">
+                <canvas id="coreCanvas"></canvas>
+                <div class="core-text">
+                    <h1 id="jarvis-state">JARVIS ACTIVE</h1>
+                    <p id="sub-text">Buyruq kutilmoqda...</p>
+                </div>
+            </section>
+
+            <!-- O'NG PANEL: KAMERA -->
+            <aside class="side-panel right-panel">
+                <div class="camera-box">
+                    <video id="webcam" autoplay playsinline></video>
+                    <canvas id="gestureCanvas"></canvas>
+                    <div id="gesture-text" class="gesture-status">KAMERA OFF</div>
+                </div>
+                <div class="hud-box info-box">
+                    <span class="box-title">TARGET LOCK</span>
+                    <p id="target-info">NO TARGET DETECTED</p>
+                </div>
+            </aside>
+        </main>
+
+        <!-- KONSOL JURNALI -->
+        <section class="console-box">
+            <div id="chat-logs" class="chat-logs">
+                <div class="msg jarvis-msg"><strong>JARVIS:</strong> Xush kelibsiz, ser. Barcha tarmoqlar faol. Istalgan
+                    mavzuda savol bering, ma'lumotlarni internetdan qidirib beraman.</div>
+            </div>
+        </section>
+
+        <!-- BOSHQARUV PANEL -->
+        <footer class="controls-bar">
+            <button id="mic-btn" class="mic-btn">🎙️ OVOZ</button>
+            <button id="cam-btn" class="cam-btn">📷 KAMERA</button>
+            <input type="text" id="text-input"
+                placeholder="Qidiruv yoki buyruq kiriting (masalan: buldozer, Amirliklar)..." autocomplete="off">
+            <button id="send-btn" class="send-btn">YUBORISH</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

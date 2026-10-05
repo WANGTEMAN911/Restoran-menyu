@@ -1,0 +1,425 @@
+:root {
+    --wood-dark: #1C120B;
+    --wood: #2A1B12;
+    --wood-light: #3B2418;
+    --felt-dark: #0B3D2E;
+    --felt: #0F5A3F;
+    --cream: #F3E9D2;
+    --cream-dim: #E4D6B4;
+    --brass: #C9A15A;
+    --brass-dim: #8A6B34;
+    --red: #A23B2E;
+    --ink: #14100C;
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--wood-dark);
+    color: var(--cream);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(28, 18, 11, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(201, 161, 90, 0.18);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.brand-mark {
+    flex-shrink: 0;
+}
+
+.site-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--cream-dim);
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: var(--brass);
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+    padding: 88px 0 96px;
+    background:
+        radial-gradient(ellipse at 75% 20%, rgba(201, 161, 90, 0.08), transparent 55%),
+        var(--wood-dark);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.eyebrow {
+    color: var(--brass);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    margin: 0 0 14px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.08;
+    color: var(--cream);
+    max-width: 11ch;
+}
+
+.hero-sub {
+    color: var(--cream-dim);
+    font-size: 17px;
+    max-width: 48ch;
+    margin: 22px 0 32px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--brass);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15.5px;
+    padding: 14px 28px;
+    border-radius: 3px;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background: #DAB877;
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+.hero-art {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-art svg {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
+/* ---------- section shared ---------- */
+
+.section-title {
+    font-size: clamp(28px, 3.4vw, 36px);
+    color: var(--cream);
+    text-align: center;
+}
+
+.section-sub {
+    text-align: center;
+    color: var(--cream-dim);
+    margin: 12px auto 0;
+    max-width: 46ch;
+    font-size: 15.5px;
+}
+
+/* ---------- calculator ---------- */
+
+.calc-section {
+    padding: 96px 0;
+    background: var(--wood);
+    border-top: 1px solid rgba(201, 161, 90, 0.14);
+    border-bottom: 1px solid rgba(201, 161, 90, 0.14);
+}
+
+.calc-card {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    border: 8px solid var(--wood-light);
+}
+
+.calc-felt {
+    background:
+        radial-gradient(ellipse at 30% 0%, rgba(255, 255, 255, 0.05), transparent 60%),
+        var(--felt-dark);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border-right: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 13.5px;
+    color: var(--cream-dim);
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+input,
+select {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-variant-numeric: tabular-nums;
+    color: var(--cream);
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(201, 161, 90, 0.35);
+    border-radius: 4px;
+    padding: 11px 12px;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+input:focus-visible,
+select:focus-visible {
+    border-color: var(--brass);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1l5 5 5-5' stroke='%23C9A15A' stroke-width='1.5' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 34px;
+}
+
+.calc-result {
+    background: var(--ink);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6px;
+}
+
+.result-label {
+    color: var(--brass);
+    font-size: 14px;
+}
+
+.result-amount {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 600;
+    color: var(--cream);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+}
+
+.result-currency {
+    color: var(--cream-dim);
+    font-size: 15px;
+    margin-top: -4px;
+}
+
+.result-breakdown {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(201, 161, 90, 0.2);
+    color: var(--cream-dim);
+    font-size: 14px;
+    width: 100%;
+}
+
+/* ---------- rates ---------- */
+
+.rates-section {
+    padding: 96px 0;
+    background: var(--wood-dark);
+}
+
+.rates-grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.rate-card {
+    background: var(--wood);
+    border: 1px solid rgba(201, 161, 90, 0.16);
+    border-radius: 6px;
+    padding: 28px 24px;
+}
+
+.rate-ball {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.rate-card h3 {
+    font-size: 20px;
+    color: var(--cream);
+    margin-bottom: 10px;
+}
+
+.rate-price {
+    font-family: var(--font-display);
+    font-size: 26px;
+    color: var(--brass);
+    margin: 0 0 12px;
+}
+
+.rate-price span {
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    color: var(--cream-dim);
+}
+
+.rate-desc {
+    color: var(--cream-dim);
+    font-size: 14.5px;
+    margin: 0;
+}
+
+/* ---------- contact ---------- */
+
+.contact-section {
+    padding: 80px 0;
+    background: var(--wood);
+    border-top: 1px solid rgba(201, 161, 90, 0.14);
+}
+
+.contact-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.contact-line {
+    color: var(--cream-dim);
+    font-size: 15.5px;
+    margin: 6px 0;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+    padding: 28px 0;
+    background: var(--wood-dark);
+    color: var(--cream-dim);
+    font-size: 13.5px;
+    text-align: center;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 860px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .hero-art {
+        order: -1;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .calc-card {
+        grid-template-columns: 1fr;
+    }
+
+    .rates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
+

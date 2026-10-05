@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chinor restorani — Menyu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Asosiy navigatsiya: logotip, nom va havolalar -->
+  <header class="site-nav">
+    <div class="nav-in">
+      <a class="brand" href="#top" aria-label="Chinor restorani, bosh sahifa">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#E6A92E" stroke-width="2" aria-hidden="true">
+          <path d="M32 4l8 14 16 8-16 8-8 14-8-14-16-8 16-8z" />
+          <path d="M32 22v30M22 40c4-2 7-6 10-12 3 6 6 10 10 12" />
+          <circle cx="32" cy="32" r="3" fill="#2A5C9A" stroke="none" />
+        </svg>
+        <span>Chinor</span>
+      </a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Menyuni ochish">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+      <ul class="links" id="links">
+        <li><a href="#menu">Menyu</a></li>
+        <li><a href="#info">Ish vaqti</a></li>
+        <li><a href="#contact">Aloqa</a></li>
+        <li><a class="cta" href="tel:+998901234567">Stol band qilish</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="tile" aria-hidden="true"></div>
+  <section class="hero" id="top">
+    <h1>Bizning menyu</h1>
+    <p>Milliy oshxona, Bog'ot. Hamma taom tandir va qozonda, buyurtma bilan tayyorlanadi.</p>
+  </section>
+  <div class="tile" aria-hidden="true"></div>
+
+  <!-- Bo'limlar va qidiruv -->
+  <div class="subnav">
+    <div class="tabs" id="tabs" role="group" aria-label="Menyu bo‘limlari"></div>
+    <div class="search"><input id="q" type="search" placeholder="Taom qidirish: masalan, palov"
+        aria-label="Taom qidirish"></div>
+  </div>
+
+  <main id="menu" aria-live="polite"></main>
+
+  <footer>
+    <div class="foot">
+      <div id="info">
+        <b>Ish vaqti</b>
+        <p>Har kuni 10:00 dan 23:00 gacha.</p>
+        <p>Narxlar so‘mda ko‘rsatilgan. Xizmat haqi (10%) hisobga kiritilmagan.</p>
+      </div>
+      <div id="contact">
+        <b>Aloqa</b>
+        <p>Bog'ot tumani, Toshkent ko'chasi 31-uy</p>
+        <p><a href="tel:+998915717981">+998 91 578 79 81</a></p>
+        <p>Wi-Fi: Chinor_Guest, parol: plov2026</p>
+      </div>
+      <div>
+        <b>Allergiya</b>
+        <p>Allergiyangiz bo‘lsa, ofitsiantga ayting: taomlarda yong‘oq, sut, kunjut va gluten bo‘lishi mumkin.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

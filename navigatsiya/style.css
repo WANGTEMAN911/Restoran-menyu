@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav_menu {
+    display: flex;
+    gap: 100px;
+    list-style: none;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.btn {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a :hover {
+    color: #0056b3;
+}
+
+/* 1. Har bir link o'zi alohida chegara bo'ladi */
+.nav_menu a {
+    position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
+    /* O'lchamini to'g'ri olishi uchun */
+}
+
+/* 2. Chiziq ro'yxatga emas, aynan shu "a" tegiga tegishli bo'ladi */
+.nav_menu a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #0056b3;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+/* 3. Sichqoncha qaysi biriga borsa, faqat o'shaning chizig'i 100% yoziladi */
+.nav_menu a:hover::after {
+    width: 100%;
+}

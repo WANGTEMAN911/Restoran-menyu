@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #000;
+    color: #00ffcc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0.35;
+}
+
+/* MINI POP-UP (OVERLAY) - EKRANNI TO'SIB QO'YMAYDI */
+.scare-overlay {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+    background: rgba(15, 0, 0, 0.95);
+    border: 2px solid #ff0055;
+    padding: 15px 30px;
+    text-align: center;
+    box-shadow: 0 0 30px #ff0055;
+    color: #ff0055;
+    transition: opacity 0.2s ease;
+}
+
+.scare-overlay.hidden {
+    display: none;
+}
+
+.scare-content h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px #ff0055;
+}
+
+.scare-content p {
+    font-size: 13px;
+    color: #fff;
+}
+
+/* TEPADAGI FLASHER BANNER */
+.alert-banner {
+    position: absolute;
+    top: 5px;
+    z-index: 10;
+    background: rgba(255, 0, 85, 0.2);
+    border: 1px solid #ff0055;
+    color: #ff0055;
+    padding: 4px 15px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+    animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+.app-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 12px;
+    width: 98vw;
+    height: 93vh;
+    margin-top: 25px;
+}
+
+.panel {
+    background: rgba(2, 12, 18, 0.92);
+    border: 1px solid #00ffcc;
+    border-radius: 4px;
+    padding: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.left-panel {
+    width: 25%;
+}
+
+.center-panel {
+    width: 50%;
+}
+
+.right-panel {
+    width: 25%;
+}
+
+.panel-header {
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px dashed #00ffcc;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.danger-text {
+    color: #ff0055 !important;
+    font-weight: bold;
+}
+
+.sub {
+    color: #888;
+}
+
+.metric-box {
+    margin-bottom: 12px;
+}
+
+.metric-title {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.progress-bg {
+    width: 100%;
+    height: 8px;
+    background: #002b2b;
+    border: 1px solid #00ffcc;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #00ffcc;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.hack-log {
+    font-size: 11px;
+    color: #ff0055;
+    height: 170px;
+    overflow: hidden;
+    line-height: 16px;
+    background: rgba(255, 0, 85, 0.05);
+    border: 1px solid rgba(255, 0, 85, 0.3);
+    padding: 5px;
+}
+
+.network-info {
+    font-size: 11px;
+    line-height: 18px;
+    margin-top: auto;
+}
+
+/* TERMINAL */
+.terminal-body {
+    flex: 1;
+    overflow-y: auto;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prompt {
+    color: #ff0055;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+#term-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ffcc;
+    font-size: 13px;
+    flex: 1;
+    font-family: inherit;
+}
+
+/* GLOBUS */
+.globe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+#globeCanvas {
+    width: 240px;
+    height: 240px;
+}
+
+.time-box {
+    margin-top: auto;
+}
+
+.clock-display {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.date-display {
+    font-size: 11px;
+    color: #888;
+    margin-top: 4px;
+}

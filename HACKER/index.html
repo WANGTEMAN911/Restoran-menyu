@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDEX-UI Cyber Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BUTUN EKRAN BOYLAB MATRIX / BINARY BACKGROUND -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- EKAN YoRONIDA CHIQADIGAN QIZIL VAHIMALI POPUP (OVERLAY) -->
+    <div id="scare-overlay" class="scare-overlay hidden">
+        <div class="scare-content">
+            <h1>⚠️ CRITICAL SECURITY BREACH ⚠️</h1>
+            <h2>TARGET SYSTEM INFILTRATED</h2>
+            <p id="scare-text">EXTRACTING PASSWORDS AND USER DATA...</p>
+        </div>
+    </div>
+
+    <!-- TEPADAGI FLASHING BANNER -->
+    <div class="alert-banner">
+        ⚠️ ALERT: SYSTEM OVERRIDE IN PROGRESS // USER IDENTIFIED // ROOT ACCESS GRANTED
+    </div>
+
+    <div class="app-container">
+        <!-- CHAP PANEL -->
+        <div class="panel left-panel">
+            <div class="panel-header">SYSTEM STATUS <span class="sub">SYS_01</span></div>
+
+            <div class="metric-box">
+                <div id="cpu-text" class="metric-title">CPU USAGE: 0%</div>
+                <div class="progress-bg">
+                    <div class="progress-bar cpu-bar"></div>
+                </div>
+            </div>
+
+            <div class="metric-box">
+                <div id="ram-text" class="metric-title">RAM USAGE: 0%</div>
+                <div class="progress-bg">
+                    <div class="progress-bar ram-bar"></div>
+                </div>
+            </div>
+
+            <div class="hack-section">
+                <div class="panel-header danger-text">ACCOUNT_INFILTRATOR</div>
+                <div class="hack-log" id="hack-log">
+                    <div class="danger-text">[!] TARGET ACCOUNT IDENTIFIED</div>
+                </div>
+            </div>
+
+            <div class="network-info">
+                <div class="danger-text">IP: 192.168.1.104 (TRACED)</div>
+                <div>PROXY: CHAIN_ENCRYPTED</div>
+                <div id="latency-text">LATENCY: 14ms</div>
+            </div>
+        </div>
+
+        <!-- O'RTA PANEL: TERMINAL -->
+        <div class="panel center-panel">
+            <div class="panel-header">eDEX-UI OS v2.0 // TERMAIN_SHELL</div>
+            <div id="term-output" class="terminal-body">
+                <div class="danger-text">[WARNING] UNAUTHORIZED ACCESS DETECTED!</div>
+                <div>SYSTEM INJECTION IN PROGRESS... TYPE ANYTHING TO EXECUTE HACK.</div>
+                <br>
+            </div>
+            <div class="terminal-input-line">
+                <span class="prompt">root@cyber-node:~#</span>
+                <input type="text" id="term-input" autofocus autocomplete="off">
+            </div>
+        </div>
+
+        <!-- O'NG PANEL: YER SHARI -->
+        <div class="panel right-panel">
+            <div class="panel-header">GLOBAL TARGET MAP <span class="sub">SAT_MAP</span></div>
+
+            <div class="globe-container">
+                <canvas id="globeCanvas"></canvas>
+            </div>
+
+            <div class="time-box">
+                <div class="panel-header">TIME & DATE</div>
+                <div id="clock-time" class="clock-display">00:00:00</div>
+                <div id="clock-date" class="date-display">00.00.2026</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

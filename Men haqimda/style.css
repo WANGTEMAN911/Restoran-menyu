@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1a232a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-wrapper {
+  background-color: #5b9ed6;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 900px;
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Chap tomon */
+.profile-side {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-right: 2px solid #eef2f5;
+}
+
+.avatar-box {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #1a2b3c;
+  border: 4px solid #5b9ed6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 28px;
+  color: #2b3a4a;
+  font-weight: 700;
+}
+
+.title {
+  color: #5b9ed6;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.socials a {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #5b9ed6;
+  border-radius: 50%;
+  color: #5b9ed6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background-color: #5b9ed6;
+  color: #fff;
+}
+
+.bio {
+  font-size: 13px;
+  color: #667085;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #5b9ed6;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #4a8cc4;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #5b9ed6;
+  color: #5b9ed6;
+}
+
+.btn-outline:hover {
+  background-color: #5b9ed6;
+  color: #fff;
+}
+
+/* O'ng tomon */
+.timeline-side {
+  width: 50%;
+  padding: 40px;
+  position: relative;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 24px;
+  color: #2b3a4a;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 25px;
+}
+
+/* Chiziq */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 10px;
+  width: 2px;
+  background-color: #d0e2f2;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.timeline-item .dot {
+  position: absolute;
+  left: -25px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #5b9ed6;
+}
+
+.date {
+  color: #5b9ed6;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.role {
+  font-size: 15px;
+  color: #2b3a4a;
+  margin-bottom: 6px;
+}
+
+.desc {
+  font-size: 12px;
+  color: #667085;
+  line-height: 1.4;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #2b3a4a;
+  cursor: pointer;
+}
